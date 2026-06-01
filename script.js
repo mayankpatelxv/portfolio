@@ -244,19 +244,25 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
-// Download CV functionality
-document.getElementById('downloadCV').addEventListener('click', function(e) {
-    e.preventDefault();
-    
-    // Create a temporary link element
-    const link = document.createElement('a');
-    link.href = 'Black and White Minimalist Accountant Resume.pdf';
-    link.download = 'Mayank_Patel_Resume.pdf';
-    
-    // Append to body, click, and remove
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Download CV functionality
+    const downloadBtn = document.getElementById('downloadCV');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create a temporary link element
+            const link = document.createElement('a');
+            link.href = 'Black and White Minimalist Accountant Resume.pdf';
+            link.download = 'Mayank_Patel_Resume.pdf';
+            
+            // Append to body, click, and remove
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
 });
 
 // Add ripple animation
