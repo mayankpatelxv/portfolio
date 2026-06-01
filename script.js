@@ -250,7 +250,7 @@ document.getElementById('downloadCV').addEventListener('click', function(e) {
     
     // Create a temporary link element
     const link = document.createElement('a');
-    link.href = 'White Professional Web Designer Resume.pdf';
+    link.href = 'Black and White Minimalist Accountant Resume.pdf';
     link.download = 'Mayank_Patel_Resume.pdf';
     
     // Append to body, click, and remove
